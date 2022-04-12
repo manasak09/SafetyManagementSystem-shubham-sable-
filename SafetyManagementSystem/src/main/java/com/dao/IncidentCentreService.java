@@ -7,22 +7,22 @@ import org.springframework.stereotype.Service;import com.model.IncidentCentre;
 @Service
 public class IncidentCentreService {
 	@Autowired
-	IncidentCentreDAO injurycentredaoImpl;
-	public void addInjury(IncidentCentre centre) {
-		injurycentredaoImpl.addIncident(centre);
+	IncidentCentreDAO incidentcentredaoImpl;
+	public void addIncident(IncidentCentre centre) {
+		incidentcentredaoImpl.addIncident(centre);
 	}
 	public IncidentCentre findCentre(int id) {
-		return injurycentredaoImpl.findIncident(id);
+		return incidentcentredaoImpl.findIncident(id);
 		
 	}
 	public List<IncidentCentre> findAllCentre() {
-		return injurycentredaoImpl.findAllIncident();
+		return incidentcentredaoImpl.findAllIncident();
 	}
 	public boolean updateCentre(IncidentCentre centre) {
-		return injurycentredaoImpl.updateIncident(centre);
+		return incidentcentredaoImpl.updateIncident(centre);
 	}
 	public boolean deleteCentre(IncidentCentre centre) {
-		return injurycentredaoImpl.deleteIncident(centre);
+		return incidentcentredaoImpl.deleteIncident(centre);
 	}
 
 }
