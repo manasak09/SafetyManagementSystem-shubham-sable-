@@ -1,28 +1,35 @@
 package com.dao;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;import com.model.IncidentCentre;
-
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+import com.model.*;
+import java.util.*;
 @Service
-public class IncidentCentreService {
+public class ItemService {
+	
 	@Autowired
-	IncidentCentreDAO incidentcentredaoImpl;
-	public void addIncident(IncidentCentre centre) {
-		incidentcentredaoImpl.addIncident(centre);
+	ItemDAO itemDAOImpl;
+	
+	public void add(Item item)
+	{
+		itemDAOImpl.addItem(item);
 	}
-	public IncidentCentre findCentre(int id) {
-		return incidentcentredaoImpl.findIncident(id);
-		
+	public Item find(int id)
+	{
+		return itemDAOImpl.findItem(id);
 	}
-	public List<IncidentCentre> findAllCentre() {
-		return incidentcentredaoImpl.findAllIncident();
+	public List<Item> findAll()
+	{
+		return itemDAOImpl.findAllItem();
 	}
-	public boolean updateCentre(IncidentCentre centre) {
-		return incidentcentredaoImpl.updateIncident(centre);
+	public boolean update(Item item)
+	{
+		return itemDAOImpl.updateItem(item);
 	}
-	public boolean deleteCentre(IncidentCentre centre) {
-		return incidentcentredaoImpl.deleteIncident(centre);
+	public boolean delete(Item item)
+	{
+		return itemDAOImpl.deleteItem(item);
 	}
 
 }
