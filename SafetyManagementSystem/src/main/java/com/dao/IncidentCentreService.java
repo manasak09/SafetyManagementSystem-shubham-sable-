@@ -12,7 +12,7 @@ public class IncidentCentreService {
 		injurycentredaoImpl.addIncident(centre);
 	}
 	public IncidentCentre findCentre(int id) {
-		return injurycentredaoimpl.findIncident(id);
+		return injurycentredaoImpl.findIncident(id);
 		
 	}
 	public List<IncidentCentre> findAllCentre() {
