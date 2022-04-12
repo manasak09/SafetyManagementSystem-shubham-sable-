@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 import com.model.IncidentCentre;
 
+@Component
 public class IncidentCentreDAOImpl implements IncidentCentreDAO {
 	
 	@Autowired
@@ -67,3 +68,4 @@ public class IncidentCentreDAOImpl implements IncidentCentreDAO {
 	}
 
 }
+
